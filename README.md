@@ -16,7 +16,9 @@ All 100 simulated data sets for analysis in the paper are stored in `./data/sim_
 The R script `demo.R` provide an example to illustrate how the algorithm is implemented with a simulated data set. The data set is the first simulated data set stored in `./data/sim_data.Rdata`. The main functions of MCEM are in the script `mcem_fcns.R` in the ./R folder. In particular, `mcem_dgp()` function implements MCEM with single-DGP and `mcem_dgp_multi()` function implements MCEM with multiple-DGP. The functions return a list including samples of stationary points `sample_t`, samples of $\sigma$, `sample_sig` and the values of hyperparameters in the covariance function of every iteration, saved as `thetas`.
 
 ### Full simulation study
-The entire simulation study in the reference paper can be reproduced by running the script `simulation_main_mcem.R`, including comparing single-DGP, multiple-GDP and ordinary Gaussian process regression (GPR). The simulation results are stored in `simulation_main_result_sig.RData`. A matern kernel analog of simulation study is performed in `simulation_main_matern_mcem.R`.
+The entire simulation study in the reference paper can be reproduced by running the script `simulation_main_mcem.R`, including comparing single-DGP, multiple-GDP and ordinary Gaussian process regression (GPR). 
+
+The simulation results are stored in `sim_result_algo.RData` for running algorithms, and `sim_pred_gp_lst.RData`, `sim_pred_dgp_oracle_lst.RData`, `sim_pred_dgp_single_lst.RData`, `sim_pred_dgp_multiple_lst.RData` for information about samples of $f$. To save time running, one can load these data for further analysis. A matern kernel analog of simulation study is performed in `simulation_main_matern_mcem.R`.
 
 ### Full Data Analysis
 The full ERP data analysis is performed in `data_analysis_subject_sig_mcem.R`. The script `data_analysis_subject_sig_mcem.R` performs the multiple-DGP analog of analysis.

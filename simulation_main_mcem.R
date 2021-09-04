@@ -189,14 +189,19 @@ system.time(pred_dgp_single_lst <- foreach(k = 1:no_data) %dopar% {
 
 stopCluster(cl)
 
-# save(EB_gp, EB_dgp_oracle, 
-#      StoEM_multi, StoEM_single,
-#      pred_gp_lst, pred_dgp_oracle_lst,
-#      pred_dgp_multi_lst, pred_dgp_single_lst,
-#      file = "./simulation_main_result_sig.RData")
+save(EB_gp, EB_dgp_oracle,
+     StoEM_multi, StoEM_single,
+     pred_gp_lst, pred_dgp_oracle_lst,
+     pred_dgp_multi_lst, pred_dgp_single_lst,
+     file = "./simulation_main_result_sig.RData")
 
-load("./simulation_main_result_sig.RData")
 
+## load the results
+load("./sim_result_algo.RData")
+load("./sim_pred_gp_lst.RData")
+load("./sim_pred_dgp_oracle_lst.RData")
+load("./sim_pred_dgp_single_lst.RData")
+load("./sim_pred_dgp_multiple_lst.RData")
 # =============================================================================
 ## Root Mean Square Error
 # =============================================================================

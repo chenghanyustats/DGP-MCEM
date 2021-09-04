@@ -90,7 +90,12 @@ title(substitute(
 
 ## load data sets
 load("./data/sim_data.RData", verbose = TRUE)
-load("./simulation_main_result_sig.RData", verbose = TRUE)
+# load("./simulation_main_result_sig.RData", verbose = TRUE)
+load("./sim_result_algo.RData")
+load("./sim_pred_gp_lst.RData")
+load("./sim_pred_dgp_oracle_lst.RData")
+load("./sim_pred_dgp_single_lst.RData")
+load("./sim_pred_dgp_multiple_lst.RData")
 
 x_test <- sort(seq(0, 2, length.out = 100))
 
